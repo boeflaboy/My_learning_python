@@ -1,21 +1,24 @@
-class User:
-    def __init__(self, user_id, username):
-        self.id = user_id
-        self.username = username
-        self.followers = 0
-        self.following = 0
+class Animal:
+    def __init__(self):
+        self.number_eyes = 2
 
-    def follow(self, user):
-        user.followers += 1
-        self.following += 1
+    def breathe(self):
+        print("Inhale/Exhale")
 
-user_1 = User(1, 'Samie')
-user_2 = User(1, 'Henk')
+class Fish(Animal):
+    def __init__(self):
+        super().__init__()
 
-user_1.follow(user_2)
-print(user_1.followers)
-print(user_1.following)
+    def swim(self):
+        print("moving in the water")
 
+    def breathe(self):
+        super().breathe()
+        print("Doing under water")
+
+
+nemo = Fish()
+nemo.breathe()
 
 
 
