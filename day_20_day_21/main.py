@@ -33,9 +33,8 @@ while game_is_on:
         scoreboard.print_score()
 
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        scoreboard.goto(0,0)
-        scoreboard.write("Game Over", align="Center", font=('Courier', 24, 'normal'))
-        break
+        scoreboard.game_over()
+        game_is_on = False
 
 
 screen.exitonclick()
