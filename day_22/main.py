@@ -49,12 +49,6 @@ while True:
         ball.reset_ball_position()
         scoreboard.increate_score_left_player()
 
-
-
-
-
-
-
 screen.exitonclick()
 
 
