@@ -1,9 +1,9 @@
 from turtle import Turtle
+
 STARTING_POSITION = (0, -280)
 MOVE_DISTANCE = 15
 SWITCH_LANE = 15
 FINISH_LINE_Y = 280
-
 
 
 class Player(Turtle):
@@ -16,7 +16,6 @@ class Player(Turtle):
         self.goto(STARTING_POSITION)
         self.current_position = self.xcor()
 
-
     def move_turtle_forward(self):
         self.forward(MOVE_DISTANCE)
 
@@ -26,9 +25,12 @@ class Player(Turtle):
     def move_turtle_left(self):
         self.current_position -= SWITCH_LANE
         self.goto(self.current_position, self.ycor())
-        print(self.xcor())
+
 
     def move_turtle_right(self):
         self.current_position += SWITCH_LANE
         self.goto(self.current_position, self.ycor())
-        print(self.xcor())
+
+
+    def reset_player_position(self):
+        self.goto(STARTING_POSITION)
